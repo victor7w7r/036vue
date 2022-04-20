@@ -1,1 +1,11 @@
-<template><router-view /></template>
+<template>
+    Awesome
+</template>
+
+<script setup lang="ts">
+
+</script>
+
+<style scoped lang="scss">
+
+</style>
