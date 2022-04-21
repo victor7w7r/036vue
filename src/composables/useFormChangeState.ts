@@ -1,17 +1,15 @@
 import { computed, ref, ComputedRef } from 'vue';
-import { Store, useStore } from 'vuex';
-
-import type { State } from '../types';
+import { useData } from '../stores/dataStore';
 
 export const useFormChangeState = () => {
 
-    const store: Store<State> = useStore();
+    const store = useData();
     const dataValue = ref<string>('');
 
-    const getState: ComputedRef<string> = computed( () => store.getters['getData'] )
+    const getState: ComputedRef<string> = computed(() => store.getData);
 
     const handleSubmit = (): void => {
-        store.dispatch('success', dataValue.value);
+        store.success(dataValue.value);
     };
 
     return { handleSubmit, getState, dataValue };

@@ -12,6 +12,7 @@ Is the best programming language for web. Made with ❤️ by
 
 - axios: Promise based HTTP client for the browser
 - sass: For nested and optimized CSS
+- pinia: "The Vue Store that you will enjoy using"
 
 ### Change to blank template
 
