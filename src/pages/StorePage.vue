@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 
-import { useFormChangeState } from "../composables";
+import { useFormChangeState } from "@/composables";
 
 const { handleSubmit, getState, dataValue } = useFormChangeState();
 

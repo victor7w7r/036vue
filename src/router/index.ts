@@ -1,9 +1,9 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
-import MainLayout from '../components/layouts/MainLayout.vue';
+import MainLayout from '@/components/layouts/MainLayout.vue';
 
-import HomePage from '../pages/HomePage.vue';
-import StorePage from '../pages/StorePage.vue';
+import HomePage from '@/pages/HomePage.vue';
+import StorePage from '@/pages/StorePage.vue';
 
 const routes: RouteRecordRaw[] = [
     {

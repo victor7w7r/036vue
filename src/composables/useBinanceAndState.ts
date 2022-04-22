@@ -1,9 +1,9 @@
 import { computed, ref, onMounted, ComputedRef } from 'vue';
 
-import type { TBinance } from '../types';
+import type { TBinance } from '@/types';
 
-import { binanceData } from '../api/binance';
-import { useData } from '../stores/dataStore';
+import { binanceData } from '@/api/binance';
+import { useData } from '@/stores/dataStore';
 
 export const useBinanceAndState = () => {
 

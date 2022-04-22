@@ -30,7 +30,7 @@
 
 <script setup lang="ts">
 
-import { useBinanceAndState } from "../composables";
+import { useBinanceAndState } from "@/composables";
 
 const { getState, isLoading, bin } = useBinanceAndState();
 

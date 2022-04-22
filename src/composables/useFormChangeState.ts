@@ -1,5 +1,5 @@
 import { computed, ref, ComputedRef } from 'vue';
-import { useData } from '../stores/dataStore';
+import { useData } from '@/stores/dataStore';
 
 export const useFormChangeState = () => {
 
