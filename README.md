@@ -10,7 +10,7 @@ Is the best programming language for web. Made with ❤️ by
 
 ## Extra Packages
 
-- axios: Promise based HTTP client for the browser
+- rxjs: Reactive Extensions Library for JavaScript
 - sass: For nested and optimized CSS
 - pinia: "The Vue Store that you will enjoy using"
 
