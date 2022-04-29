@@ -10,6 +10,8 @@ Is the best programming language for web. Made with ❤️ by
 
 ## Extra Packages
 
+- vueuse: Collection of essential Vue Composition Utilities
+- vueuse-rxjs: Composables for rxjs
 - rxjs: Reactive Extensions Library for JavaScript
 - sass: For nested and optimized CSS
 - pinia: "The Vue Store that you will enjoy using"
