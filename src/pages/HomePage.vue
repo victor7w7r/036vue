@@ -18,11 +18,13 @@
             <div class="col-3">
                 <h3 class="text-center mt-3">Lets see bitcoin price</h3>
                 <br />
-                <p class='text-center' v-if="isLoading">Loading...</p>  
-                <template v-else>
-                    <p class='text-center'>Symbol: {{ bin.symbol }} </p>
-                    <p class='text-center'>Price: {{ bin.askPrice }} </p>
-                </template>
+        
+                    <p class='text-center' v-if="isLoading">Loading...</p>  
+                    <template v-else>
+                        <p class='text-center'>Symbol: {{ bin!.symbol }} </p>
+                        <p class='text-center'>Price: {{bin!.askPrice }} </p>
+                    </template>
+            
             </div>
         </div>
     </div>
@@ -32,7 +34,7 @@
 
 import { useBinanceAndState } from "@/composables";
 
-const { getState, isLoading, bin } = useBinanceAndState();
+const { getState, bin, isLoading } = useBinanceAndState();
 
 </script>
 
