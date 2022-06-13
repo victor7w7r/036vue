@@ -1,46 +1,50 @@
 <template>
-    <h3 class="text-center mt-3">Happy Hacking! with Typescript?</h3>
-    <p class="text-center mt-3 roboto">SCSS is working? Yes, with Roboto</p>
-    <p class="text-center mt-3" v-if="getState !== ''">Store State: Yes, you write <b>{{ getState }}</b></p>
-    <p class="text-center mt-3" v-else>Store State: Not yet.</p>
-    <div class="row mt-4">
-        <div class="col-sm"></div>
-        <div class="col-sm">
-            <h4 class="text-center mt-3">Made with love by</h4>
-            <div class="d-flex justify-content-center">
-                <img src="../assets/brand.png" alt=""/>
+    <div class="absolute h-screen inset-0 backdrop-blur-xl">
+        <div class='flex flex-col lg:flex-row items-center mt-24 tall:mt-32 lg:items-stretch lg:justify-evenly lg:h-3/6'>
+            <div :class="`card-container ${controlBackground}`">
+                <p class="adaptable-center-text text-lg tall:text-xl lg:text-3xl font-amina">Made with love by</p>
+                <img :src="darkMode ? brandwhite : brand" alt="" class="scale-75 lg:scale-100" />
+                <h3 class="adaptable-center-text text-base lg:text-xl font-semibold mb-4">Happy Hacking! with Typescript?</h3>
+                <p class="adaptable-center-text text-base lg:text-xl font-roboto mb-8">Roboto Font works with</p>
+                <img :src="darkMode ? tailwindWhite : tailwind" alt="" class="scale-50 tall:scale-75 lg:scale-75" />
+            </div>
+            <div :class="`card-container ${controlBackground}`">
+                <p class="adaptable-center-text text-base lg:text-xl font-semibold" v-if="data !== ''">Store State: Yes, you write <b>{{ data }}</b></p>
+                <p class="adaptable-center-text text-base lg:text-xl font-semibold" v-else>Store State: Not yet.</p>
+                <div class='lg:w-[28rem] w-[32rem]'></div>
+                <h3 class="adaptable-center-text text-lg lg:text-3xl font-semibold my-4">Lets see bitcoin price</h3>
+                <template v-if="isLoading">
+                    <Spinner appendClass='data' />
+                </template>
+                <template v-else>
+                    <p class='adaptable-center-text text-base lg:text-lg font-semibold'>Symbol: {{ bin!.symbol }} </p>
+                    <p class='adaptable-center-text text-base lg:text-lg font-semibold'>Price: {{bin!.askPrice }} </p>
+                </template>
             </div>
         </div>
-        <div class="col-sm"></div>
-    </div>
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-3">
-                <h3 class="text-center mt-3">Lets see bitcoin price</h3>
-                <br />
-        
-                    <p class='text-center' v-if="isLoading">Loading...</p>  
-                    <template v-else>
-                        <p class='text-center'>Symbol: {{ bin!.symbol }} </p>
-                        <p class='text-center'>Price: {{bin!.askPrice }} </p>
-                    </template>
-            
-            </div>
+        <div class='flex items-center justify-center my-8 tall:my-12'>
+            <button class="standard-button" @click="changeToStore">Go to store</button>
+        </div>
+        <div class='flex flex-row items-center justify-center'>
+            <button class="blue-button" @click="blueChange"></button>
+            <button class="purple-button" @click="purpleChange"></button>
+            <button class="red-button" @click="redChange"></button>
+            <button class="emerald-button" @click="emeraldChange"></button>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import { useHome } from "@/composables";
 
-import { useBinanceAndState } from "@/composables";
+import Spinner from "@/components/Spinner.vue";
 
-const { getState, bin, isLoading } = useBinanceAndState();
+import brand from '../assets/brand.png';
+import brandwhite from '../assets/brandwhite.png';
+import tailwind from '../assets/tailwind.png';
+import tailwindWhite from '../assets/tailwindwhite.png';
 
+const { data, bin, isLoading, darkMode, 
+        controlBackground, blueChange, purpleChange, 
+        redChange, emeraldChange, changeToStore } = useHome();
 </script>
-
-<style scoped lang="scss">
-@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"; 
-.roboto {
-    font-family: 'Roboto', sans-serif;
-}
-</style>

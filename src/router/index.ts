@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
-import MainLayout from '@/components/layouts/MainLayout.vue';
+import MainLayout from '@/Layout.vue';
 
 import HomePage from '@/pages/HomePage.vue';
 import StorePage from '@/pages/StorePage.vue';
@@ -20,9 +20,9 @@ const routes: RouteRecordRaw[] = [
                 path: 'store',
                 name: 'store',
                 component: StorePage,
-            },
+            }
         ]
-    },
+    }
 ];
 
 const router = createRouter({
