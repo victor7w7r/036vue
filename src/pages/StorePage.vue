@@ -21,7 +21,6 @@
 </template>
 
 <script setup lang="ts">
-
 import { useStore } from "@/composables";
 
 const inputDesign: string = `block py-2.5 px-0 w-full text-sm text-gray-900 
@@ -36,5 +35,4 @@ const floatingLabelDesign: string = `peer-focus:font-medium absolute text-sm tex
     peer-focus:scale-75 peer-focus:-translate-y-6`;
 
 const { handleSubmit, data, dataValue, controlBackground, changeToHome } = useStore();
-
 </script>

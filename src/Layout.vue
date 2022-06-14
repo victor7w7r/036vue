@@ -20,5 +20,4 @@ onMounted(() => {
 
 const whiteBackground = computed(() => themeStore.getWhiteBackground);
 const darkBackground = computed(() => themeStore.getDarkBackground);
-
 </script>
