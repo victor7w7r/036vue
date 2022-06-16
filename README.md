@@ -1,6 +1,6 @@
 # 036vue
 
-A very simple template for Vue with essential packages and strict TypeScript/SCSS with Vite
+A very simple template for Vue and Nuxt3 with essential packages and strict TypeScript/SCSS with Vite
 
 ## Why Typescript?
 
