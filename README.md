@@ -6,7 +6,7 @@ A very simple template for Vue and Nuxt3 with essential packages and strict Type
 
 Is the best programming language for web. Made with ❤️ by
 
-![Alt text](assets/brandwhite.png?raw=true "Title")
+![Alt text](brandwhite.png?raw=true "Title")
 
 ## Extra Packages
 
