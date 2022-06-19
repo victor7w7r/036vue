@@ -1,6 +1,6 @@
 {
   "name": "036nuxt",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "scripts": {
     "build": "nuxt build",
@@ -10,15 +10,13 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.1.2",
-    "@vueuse/core": "^8.7.3",
-    "@vueuse/nuxt": "^8.7.3",
-    "@vueuse/rxjs": "^8.7.3",
-    "nuxt": "3.0.0-rc.4",
-    "sass": "^1.52.3"
-  },
-  "dependencies": {
     "@pinia/nuxt": "^0.1.9",
+    "@vueuse/core": "^8.7.4",
+    "@vueuse/nuxt": "^8.7.4",
+    "@vueuse/rxjs": "^8.7.4",
+    "nuxt": "3.0.0-rc.4",
     "pinia": "^2.0.14",
-    "rxjs": "^7.5.5"
+    "rxjs": "^7.5.5",
+    "sass": "^1.52.3"
   }
 }

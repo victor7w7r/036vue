@@ -35,8 +35,7 @@
 </template>
 
 <script setup lang="ts">
-
-const { data, bin, isLoading, darkMode, 
-        controlBackground, blueChange, purpleChange, 
+const { data, bin, isLoading, darkMode,
+        controlBackground, blueChange, purpleChange,
         redChange, emeraldChange, changeToStore } = useHome();
 </script>

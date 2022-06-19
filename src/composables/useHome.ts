@@ -18,7 +18,7 @@ export const useHome = () => {
     const darkMode = computed(() => themeStore.getDarkMode);
     const data = computed(() => dataStore.getData);
 
-    const blueChange = (): void => { 
+    const blueChange = (): void => {
         if(darkMode.value) {
             themeStore.setDarkBackground("dark:bg-sky-900");
             themeStore.setControlBackground('bg-sky-700/30');
@@ -76,8 +76,8 @@ export const useHome = () => {
     }));
 
     return {
-        data, bin, isLoading, darkMode, 
-        controlBackground, blueChange, purpleChange, 
+        data, bin, isLoading, darkMode,
+        controlBackground, blueChange, purpleChange,
         redChange, emeraldChange , changeToStore
     };
 

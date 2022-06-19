@@ -16,7 +16,7 @@ const themeStore = useTheme();
 
 onMounted(() => {
     const isDark: boolean = document.body.classList.contains("dark");
-    isDark ? themeStore.setDarkMode(true) : themeStore.setDarkMode(false); 
+    isDark ? themeStore.setDarkMode(true) : themeStore.setDarkMode(false);
 });
 
 const whiteBackground = computed(() => themeStore.getWhiteBackground);

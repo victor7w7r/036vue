@@ -3,8 +3,8 @@ import { defineStore } from 'pinia';
 export const useData = defineStore('data',  {
 
     state: () => ({
-        data: "", 
-        loading: false,   
+        data: "",
+        loading: false,
         success: false
     }),
     getters: {
